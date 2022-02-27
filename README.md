@@ -55,6 +55,12 @@
 -	Enviar los datos a la base de datos (Dentro del for)
 ![image](https://user-images.githubusercontent.com/74793607/155897348-76844fa7-51b8-4b4f-a130-f98fee4ff0db.png)
 
+- Se comprueba todos los datos subidos a neo4j mediante la propia herramienta que proporciona neo4j.
+![image](https://user-images.githubusercontent.com/74793607/155897795-dd7af4a5-5678-4aa5-95dd-129d158a25a6.png)
+
+
+
 ## Analisis
--	
+-	Para el analisis se utiliza la herrmienta Power  Bi que nos permite realizar graficos dependiendo del tipo de datos que deseemos analizar. Para este ejemplo vamos a analizar las estadisticas de cada pokemon, realizando graficos que relacionen el nombre, tipo y todas las estadisticas. Utilizando diferentes filtros como por categoria, por rango o por tipo se puede obtener muchas conclusiones, desde cual es el atributo mas fuerte de una clase en especifico, hasta una comparacion entre todos los atributos mediante un grafico de barras entre los pokemons escogidos.
+![image](https://user-images.githubusercontent.com/74793607/155897802-2d9c6a10-128a-4bea-9938-ea98c202b9e8.png)
 
