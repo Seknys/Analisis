@@ -226,3 +226,9 @@ for team in league.find_all('tbody'):
 ![image](https://user-images.githubusercontent.com/74793607/155897802-2d9c6a10-128a-4bea-9938-ea98c202b9e8.png)
 
 
+- En la siguiente imagen se puede observar como mendiante filtros somos capaces de recolectar informacion como :
+El atributo mas alto de los pokemons que tienen un total (sumatoria de todas las estadisticas) entre 200 y 275. **Velocidad**
+![image](https://user-images.githubusercontent.com/74793607/155898732-29bc0c38-b2cd-4e14-abb3-2bf837dbbaf0.png)
+![image](https://user-images.githubusercontent.com/74793607/155898738-273485b8-6b4c-4a65-bd93-2ae7956dbdab.png)
+
+
