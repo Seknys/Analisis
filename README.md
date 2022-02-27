@@ -44,3 +44,17 @@
 ![image](https://user-images.githubusercontent.com/74793607/155895079-e9514a79-3876-4696-84f0-e8870c165801.png)
 
 - Crear una nueva base de datos llamada Scraping y una colección llamada listas
+![image](https://user-images.githubusercontent.com/74793607/155896879-d8776e99-4f67-4104-ba6d-b3495d122ee8.png)
+
+- Extraemos los datos mediante web Scraping
+![image](https://user-images.githubusercontent.com/74793607/155896906-0b6490d4-c713-4c14-97d0-fce808dab2bc.png)
+
+- Dentro del for se crea una variable para poder enviar todos los datos ala base de datos Mongo Db
+![image](https://user-images.githubusercontent.com/74793607/155897324-5ae40a62-41de-4169-8ea4-2c566f9fec0f.png)
+
+-	Enviar los datos a la base de datos (Dentro del for)
+![image](https://user-images.githubusercontent.com/74793607/155897348-76844fa7-51b8-4b4f-a130-f98fee4ff0db.png)
+
+## Analisis
+-	
+
