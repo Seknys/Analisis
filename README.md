@@ -36,3 +36,11 @@
 ![image](https://user-images.githubusercontent.com/74793607/155894520-571dfb5b-5431-4882-b7f3-e52885903feb.png)
 
 ## Envio de datos hacia MongoDB
+
+- Importar las librerías necesarias para establecer la conexión con Mongo DB y otras para enviar los datos 
+![image](https://user-images.githubusercontent.com/74793607/155895003-b0b56153-9d69-4ca5-8d81-2237a996cc45.png)
+
+- Establecer la conexion con mongo db mediante las debidas credenciales
+![image](https://user-images.githubusercontent.com/74793607/155895079-e9514a79-3876-4696-84f0-e8870c165801.png)
+
+- Crear una nueva base de datos llamada Scraping y una colección llamada listas
