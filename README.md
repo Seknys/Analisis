@@ -4,5 +4,11 @@
 
 ![image](https://user-images.githubusercontent.com/74793607/155894106-dcaf0969-b967-4293-a82a-4a9e00be2162.png)
 
-
+```
+from neo4j import GraphDatabase
+import logging
+from neo4j.exceptions import ServiceUnavailable
+from bs4 import BeautifulSoup
+import requests
+```
 2.	
