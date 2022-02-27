@@ -374,6 +374,14 @@ conn.close()
 - Se comprueba que los datos se hayan enviado correctamente hacia MongoDB
 ![image](https://user-images.githubusercontent.com/74793607/155899480-3751e588-ddbe-494c-80b5-d1754c9e23fb.png)
 
+## Analisis 
+- Para el analisis  del dataset extraido mediante webscraping se utiliza herramientas que solo se relacionen con texto, ya que como el tema principal son noticias, es muy dificil poder ponderar estos datos y convertirlos en graficos estadisticos.
+![image](https://user-images.githubusercontent.com/74793607/155899661-3e63dad8-e69f-4577-abc2-a9be8d27b290.png)
+
+- En el siguiente ejemplo se puede observar como mediante un filtro de palabras y fuente  se puede visualizar las noticias que cumplan con todos estos filtros que hemnos establecido, Ademas que el grafico inferior se pueden observar las palabras que mas se repiten.
+![image](https://user-images.githubusercontent.com/74793607/155899777-6677dce3-e7a8-4a73-9b4a-ef476bb7b708.png)
+
+
 
 
 
