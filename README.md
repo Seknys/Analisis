@@ -227,8 +227,12 @@ for team in league.find_all('tbody'):
 
 
 - En la siguiente imagen se puede observar como mendiante filtros somos capaces de recolectar informacion como :
-El atributo mas alto de los pokemons que tienen un total (sumatoria de todas las estadisticas) entre 200 y 275. **Velocidad**
+El atributo mas alto de los pokemons que tienen un total (sumatoria de todas las estadisticas) entre 200 y 275. 
+**Velocidad**
 ![image](https://user-images.githubusercontent.com/74793607/155898732-29bc0c38-b2cd-4e14-abb3-2bf837dbbaf0.png)
 ![image](https://user-images.githubusercontent.com/74793607/155898738-273485b8-6b4c-4a65-bd93-2ae7956dbdab.png)
+- Otro tipo de analisis que se puede realizar, es cuando deseamos averiguar que pokemon tiene la salud mas alta en comparacion con los de su tipo de una clase especifica. 
+![image](https://user-images.githubusercontent.com/74793607/155898890-c357ab99-7ae0-44f6-91b0-4be66dafde02.png)
+
 
 
