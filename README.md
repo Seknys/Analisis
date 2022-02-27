@@ -150,25 +150,73 @@ df.to_csv('Tema Libre.csv')
 ## Envio de datos hacia MongoDB
 
 - Importar las librerías necesarias para establecer la conexión con Mongo DB y otras para enviar los datos 
-![image](https://user-images.githubusercontent.com/74793607/155895003-b0b56153-9d69-4ca5-8d81-2237a996cc45.png)
+```
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+import pymongo
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure
+```
 
 - Establecer la conexion con mongo db mediante las debidas credenciales
-![image](https://user-images.githubusercontent.com/74793607/155895079-e9514a79-3876-4696-84f0-e8870c165801.png)
+```
+cliente = MongoClient('localhost',27017)
+```
 
 - Crear una nueva base de datos llamada Scraping y una colección llamada listas
-![image](https://user-images.githubusercontent.com/74793607/155896879-d8776e99-4f67-4104-ba6d-b3495d122ee8.png)
+```
+db = cliente["Scraping"]
+listas = db.listas
+```
 
 - Extraemos los datos mediante web Scraping
-![image](https://user-images.githubusercontent.com/74793607/155896906-0b6490d4-c713-4c14-97d0-fce808dab2bc.png)
+```
+
+url='https://pokemondb.net/pokedex/all'
+req = requests.get(url)
+soup = BeautifulSoup(req.text, 'html.parser')
+league = soup.find('table',class_ = 'data-table block-wide')
+for team in league.find_all('tbody'):
+    rows = team.find_all('tr')
+    for row in rows: 
+        num = row.find('td', class_ = 'cell-num cell-fixed').text.strip()
+        nombre = row.find('td', class_ = 'cell-name').text.strip()
+        clase = row.find('td', class_ = 'cell-icon').text.strip()
+        total = row.find('td', class_ = 'cell-total').text.strip()
+        Salud = row.find_all('td',class_='cell-num')[1].text
+        Ataque = row.find_all('td',class_='cell-num')[2].text
+        Defensa = row.find_all('td',class_='cell-num')[3].text
+        Velocidad_atck = row.find_all('td',class_='cell-num')[4].text
+        Velocidad_defen = row.find_all('td',class_='cell-num')[5].text
+        Velocidad = row.find_all('td',class_='cell-num')[6].text
+```
 
 - Dentro del for se crea una variable para poder enviar todos los datos ala base de datos Mongo Db
-![image](https://user-images.githubusercontent.com/74793607/155897324-5ae40a62-41de-4169-8ea4-2c566f9fec0f.png)
+```
+        teaminLeague = [{
+            '#': num,
+            'Nombre': nombre,
+            'Tipo': clase,
+            'Total': total,
+            'Salud ': Salud,
+            'Ataque':Ataque,
+            'Defensa':Defensa,
+            'Velocidad de Ataque': Velocidad_atck,
+            'Velocidad de defensa': Velocidad_defen,
+            'Velocidad': Velocidad
+         }]
+```
 
 -	Enviar los datos a la base de datos (Dentro del for)
-![image](https://user-images.githubusercontent.com/74793607/155897348-76844fa7-51b8-4b4f-a130-f98fee4ff0db.png)
+```
+        listas.insert_many(teaminLeague)
+```
 
-- Se comprueba todos los datos subidos a neo4j mediante la propia herramienta que proporciona neo4j.
-![image](https://user-images.githubusercontent.com/74793607/155897825-7aa603e3-77fa-41be-b5fd-e2c8a71beb65.png)
+- Se comprueba que los datos fueron recopilados exitosamente en la base de datos MongoDB.
+- ![image](https://user-images.githubusercontent.com/74793607/155898531-9889e6a7-32a4-44d3-af6d-155e3d8c4c22.png)
+
+
 
 
 
